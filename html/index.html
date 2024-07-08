@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/global.css"> <!-- Глобальные стили -->
+     <link rel="stylesheet" href="../css/index.css"> <!-- Локальные стили-->
+    <title>Delivery shift</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="nav-item">
+          <img src="../src/logo.svg" alt="logo">
+          <div class="item-panel" id="loggedUser">
+            <a href="/profile" class="nav-link">
+                <i class="fa-regular fa-user"></i>
+                Профиль
+            </a>
+            <a href="/history" class="nav-link">
+                <i class="fa-regular fa-clock"></i>
+                История
+            </a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <!-- Зависит от пользователя -->
+          <a href="/auth" class="nav-link">
+              <!-- <i class="fa-solid fa-arrow-right-from-bracket"></i> -->
+              <i class="fa-solid fa-arrow-right-to-bracket"></i>
+              Войти
+          </a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="preview">
+        <img src="../src/airplane.png" alt="airplane">
+        <h1>ЦФТ доставка - быстро,<br> удобно, надежно!</h1>
+      </div>
+
+      <div class="preview_form">
+        <h2 class="head-form">Рассчитать доставку</h2>
+        <form action="">
+            <div class="item-form">
+              <label for="sendingCity">Город отправки</label>
+              
+              <div class="dropdown">
+                <i class="fa-solid fa-location-dot location-icon"></i>
+                <input type="text" class="dropdownInput" placeholder="Поиск..." value="Москва" data-input="sendingInput" required>
+                <i class="fa-solid fa-angle-down arrow-icon"></i>
+                <i class="fa-solid fa-angle-up arrow-icon" style="display: none;"></i>
+        
+                <div class="dropdown-content">
+                  <div class="drop-items">
+                    <p>Москва</p>
+                    <p>Санкт-Петербург</p>
+                    <p>Новосибирск</p>
+                    <p>Екатеринбург</p>
+                    <p>Нижний Новгород</p>
+                    <p>Казань</p>
+                    <p>Челябинск</p>
+                    <p>Омск</p>
+                    <p>Самара</p>
+                    <p>Ростов-на-Дону</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="quick-select" data-quick-select="sendingInput">
+                <p>Санкт-Петербург</p>
+                <p>Новосибирск</p>
+                <p>Томск</p>
+              </div>
+
+            </div>
+            
+            <div class="item-form">
+              <label for="recipientCity">Город назначения</label>
+              
+              <div class="dropdown">
+                <i class="fa-solid fa-location-arrow location-icon"></i>
+                <input type="text" class="dropdownInput" placeholder="Поиск..." value="Санкт-Петербург" data-input="recipientInput" required>
+                <i class="fa-solid fa-angle-down arrow-icon"></i>
+                <i class="fa-solid fa-angle-up arrow-icon" style="display: none;"></i>
+        
+                <div class="dropdown-content">
+                    <div class="drop-items">
+                      <p>Москва</p>
+                      <p>Санкт-Петербург</p>
+                      <p>Новосибирск</p>
+                      <p>Екатеринбург</p>
+                      <p>Нижний Новгород</p>
+                      <p>Казань</p>
+                      <p>Челябинск</p>
+                      <p>Омск</p>
+                      <p>Самара</p>
+                      <p>Ростов-на-Дону</p>
+                    </div>
+                </div>
+              </div>
+
+              <div class="quick-select" data-quick-select="recipientInput">
+                <p>Москва</p>
+                <p>Новосибирск</p>
+                <p>Томск</p>
+              </div>
+
+            </div>
+            
+            <div class="item-form">
+              <label for="sizeBox">Размер посылки</label>
+
+              <div class="package">
+                <i class="fa-solid fa-envelope location-icon"></i>
+                <input type="text" class="packageInput" placeholder="Не выбран" value="Не выбран" readonly required>
+                <i class="fa-solid fa-angle-down arrow-icon"></i>
+                <i class="fa-solid fa-angle-up arrow-icon" style="display: none;"></i>
+
+                <div class="container-options">
+                  <div class="toggle-type">
+                    <input type="button" class="toggle-btn active" value="Примерные" data-input="default">
+                    <input type="button" class="toggle-btn" value="Точные" data-input="custom">
+                  </div>
+
+                  <div class="size-options show">
+                    <p>Конверт, 42x36x5 см</p>
+                    <p>Короб XS, 17x12x9 см</p>
+                    <p>Короб S, 23x9x10 см</p>
+                    <p>Короб M, 33x25x15 см</p>
+                    <p>Короб L, 32x25x38 см</p>
+                    <p>Короб XL, 60x35x30 см</p>
+                    <p>Большой короб, 60x60x30 см</p>
+                    <p>Чемодан, 55x35x77 см</p>
+                    <p>Палета, 120x120x80 см</p>
+                  </div>
+
+                  <div class="size-options">
+                    <div class="opt-item">
+                      <label for="lengthPackage">Длина</label>
+                      <input type="number" name="length" id="lengthPackage" placeholder="см">
+                    </div>
+                    <div class="opt-item">
+                      <label for="widthPackage">Ширина</label>
+                      <input type="number" name="width" id="widthPackage" placeholder="см">
+                    </div>
+                    <div class="opt-item">
+                      <label for="heightPackage">Высота</label>
+                      <input type="number" name="height" id="heightPackage" placeholder="см">
+                    </div>
+                    <div class="opt-item">
+                      <label for="weightPackage">Вес</label>
+                      <input type="number" name="weight" id="weightPackage" placeholder="кг">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <input type="submit" class="bnt-form" value="Рассчитать">
+        </form>
+      </div>
+    </main>
+
+    <script src="https://kit.fontawesome.com/f945db4f4e.js" crossorigin="anonymous"></script>
+    <script src="../js/index.js"></script> 
+  </body>
+</html>
