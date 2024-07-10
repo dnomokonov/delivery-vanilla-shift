@@ -3,9 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <title>Profile</title>
 </head>
 <body>
-    
+    <header>
+        <nav class="navbar">
+            <div class="nav-item">
+                <a href="/html/index.html" class="logo">
+                    <img src="../src/logo.svg" alt="logo">
+                </a>
+                <div class="item-panel" id="loggedUser">
+                    <a href="/profile" class="nav-link">
+                        <i class="fa-regular fa-user"></i>
+                        Профиль
+                    </a>
+                    <a href="/history" class="nav-link">
+                        <i class="fa-regular fa-clock"></i>
+                        История
+                    </a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <!-- Зависит от пользователя -->
+                <a href="/auth" class="nav-link">
+                    <!-- <i class="fa-solid fa-arrow-right-from-bracket"></i> -->
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                    Войти
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container_form">
+            <form action="">
+                <h2>Профиль</h2>
+                <div class="fields_form">
+                    <div class="field_group">
+                        <div class="field">
+                            <label for="lastname">Фамилия</label>
+                            <input type="text" id="lastname">
+                        </div>
+                        <div class="field">
+                            <label for="username">Имя</label>
+                            <input type="text" id="username">
+                        </div>
+                        <div class="field">
+                            <label for="patronymic">Отчество</label>
+                            <input type="text" id="patronymic">
+                        </div>
+                        
+                        
+                    </div>
+                    <div class="field_group">
+                        <div class="field">
+                            <label for="telephone">Номер телефона</label>
+                            <input type="tel" id="telephone" disabled>
+                        </div>
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input type="text" id="email">
+                        </div>
+                        <div class="field">
+                            <label for="city">Город</label>
+                            <div class="dropdown" style="width: auto;">
+                                <input type="text" class="dropdownInput" placeholder="Поиск..." value="Санкт-Петербург" data-input="recipientInput" id="city" required>
+                                <i class="fa-solid fa-angle-down arrow-icon"></i>
+                                <i class="fa-solid fa-angle-up arrow-icon" style="display: none;"></i>
+                        
+                                <div class="dropdown-content" style="width: 468px;">
+                                    <div class="drop-items">
+                                      <p>Москва</p>
+                                      <p>Санкт-Петербург</p>
+                                      <p>Новосибирск</p>
+                                      <p>Екатеринбург</p>
+                                      <p>Нижний Новгород</p>
+                                      <p>Казань</p>
+                                      <p>Челябинск</p>
+                                      <p>Омск</p>
+                                      <p>Самара</p>
+                                      <p>Ростов-на-Дону</p>
+                                    </div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" class="bnt-form" value="Обновить данные">
+            </form>
+        </div>
+    </main>
+
+    <script src="https://kit.fontawesome.com/f945db4f4e.js" crossorigin="anonymous"></script>
+    <script src="../js/index.js"></script>
 </body>
 </html>
