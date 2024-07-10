@@ -3,9 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    <title>Delivery shift</title>
 </head>
 <body>
-    
+    <header>
+        <nav class="navbar">
+            <div class="nav-item">
+                <a href="/html/index.html" class="logo">
+                    <img src="../src/logo.svg" alt="logo">
+                </a>
+                <div class="item-panel" id="loggedUser">
+                    <a href="/profile" class="nav-link">
+                        <i class="fa-regular fa-user"></i>
+                        Профиль
+                    </a>
+                    <a href="/history" class="nav-link">
+                        <i class="fa-regular fa-clock"></i>
+                        История
+                    </a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <!-- Зависит от пользователя -->
+                <a href="/auth" class="nav-link active-link">
+                    <!-- <i class="fa-solid fa-arrow-right-from-bracket"></i> -->
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                    Войти
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="auth_block">
+            <h2>Вход</h2>
+            <form action="">
+                <label for="userPhone">Введите номер телефона для входа<br>в личный кабинет</label>
+                <input type="tel" name="userPhone" id="userPhone" placeholder="Телефон">
+                <input type="tel" name="authCode" id="authCode" placeholder="Проверочный код" hidden>
+                <input type="submit" class="bnt-form" value="Продолжить">
+            </form>
+            <p class="resend active" id="resendCode" hidden>Отправить код повторно через 60 сек</p>
+        </section>
+    </main>
+
+    <script src="https://kit.fontawesome.com/f945db4f4e.js" crossorigin="anonymous"></script>
 </body>
 </html>
