@@ -110,7 +110,7 @@ packageBtnType.forEach(btn => {
 
         btn.classList.add('active')
         packageOptions.forEach(option => {
-            option.classList.toggle('show')
+            option.classList.toggle('show') // некорректно выполняет переход
         })
     })
 })
